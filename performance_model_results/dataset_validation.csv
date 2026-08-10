@@ -1,0 +1,6 @@
+Validation,Result,Details
+Required columns,PASS,All required columns exist
+Arrival timestamps,PASS,0 invalid timestamps
+Numeric values,PASS,0 invalid numeric values
+Duplicate Job IDs,PASS,0 duplicate Job IDs
+Negative performance values,PASS,0 negative values

@@ -1,0 +1,2 @@
+Scenario,Jobs,Mean_Batch_Quantity,Mean_Total_Wait_Min,Mean_Total_Service_Min,Mean_Total_Flow_Min,Median_Total_Flow_Min,P95_Total_Flow_Min,Mean_Scrap_Pct,Mean_Interarrival_Min,Estimated_Throughput_Jobs_Per_Hour
+Baseline,350,5663.291428571429,27.18,188.31714285714287,215.49714285714285,202.0,351.0,1.7185714285714286,71.65714285714286,0.8373205741626795

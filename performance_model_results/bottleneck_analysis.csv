@@ -1,0 +1,4 @@
+Criterion,Bottleneck
+Highest Mean Service Time,S3
+Highest Observed Waiting Time,S2
+Highest Queue Utilization,S3
