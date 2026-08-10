@@ -1,0 +1,13 @@
+Column,Negative_Count
+Inter_Arrival_Min,0
+S1_Wait_Min,0
+S1_Service_Min,0
+S2_Wait_Min,0
+S2_Service_Min,0
+S3_Wait_Min,0
+S3_Service_Min,0
+S4_Wait_Min,0
+S4_Service_Min,0
+Total_Wait_Min,0
+Total_Service_Min,0
+Total_Flow_Min,0

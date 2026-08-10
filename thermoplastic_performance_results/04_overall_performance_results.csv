@@ -1,0 +1,13 @@
+Metric,Value
+Number of Jobs,350.0
+Observation Hours,417.6
+Throughput Jobs Per Hour,0.8381226053639846
+Throughput Jobs Per Day,20.114942528735632
+Mean Inter Arrival Time,71.79369627507164
+Mean Waiting Time,27.18
+Mean Service Time,188.31714285714287
+Mean Flow Time,215.49714285714285
+Median Flow Time,202.0
+P90 Flow Time,334.0
+P95 Flow Time,351.0
+Mean Scrap Percentage,1.7185714285714286

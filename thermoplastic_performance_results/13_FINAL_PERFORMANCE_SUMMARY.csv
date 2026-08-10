@@ -1,0 +1,14 @@
+Performance_Metric,Result
+Total Production Jobs,350
+Throughput (jobs/hour),0.8381226053639846
+Average Inter-arrival Time (min),71.79369627507164
+Average Waiting Time (min),27.18
+Average Service Time (min),188.31714285714287
+Average Flow Time (min),215.49714285714285
+Median Flow Time (min),202.0
+P90 Flow Time (min),334.0
+P95 Flow Time (min),351.0
+Average Scrap (%),1.7185714285714286
+Waiting Bottleneck,S2
+Service Bottleneck,S3
+Batch vs Flow Correlation,0.8854402624194402
