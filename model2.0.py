@@ -6,15 +6,11 @@
 # + Discrete Event Simulation + Graph Generation
 # ============================================================
 
-# ============================================================
-# 1. IMPORT LIBRARIES
-# ============================================================
 
 import pandas as pd
 import numpy as np
 
-# Use non-interactive backend.
-# This prevents plt.show() / Tkinter problems on Windows.
+
 import matplotlib
 matplotlib.use("Agg")
 
@@ -24,17 +20,11 @@ from pathlib import Path
 import simpy
 
 
-# ============================================================
-# 2. CONFIGURATION
-# ============================================================
-
-# Automatically locate the folder containing this Python file
+# locate the folder 
 BASE_DIR = Path(__file__).resolve().parent
 
-# Dataset should be in the same folder as this Python file
 DATA_FILE = BASE_DIR / "Thermo_plastic_tc00234.csv"
 
-# Folder where all analysis results will be stored
 OUTPUT_DIR = BASE_DIR / "thermoplastic_performance_results"
 
 OUTPUT_DIR.mkdir(
@@ -51,10 +41,7 @@ GRAPH_DIR.mkdir(
 )
 
 
-# ============================================================
-# 3. START PROGRAM
-# ============================================================
-
+#Program
 print("=" * 75)
 print("EEI6373 - THERMOPLASTIC MANUFACTURING")
 print("PERFORMANCE MODELING AND ANALYSIS")
@@ -69,9 +56,9 @@ print(DATA_FILE)
 print("\nDataset exists:", DATA_FILE.exists())
 
 
-# ============================================================
-# 4. CHECK DATASET
-# ============================================================
+
+# CHECK DATASET
+
 
 if not DATA_FILE.exists():
 
@@ -89,9 +76,9 @@ if not DATA_FILE.exists():
     )
 
 
-# ============================================================
-# 5. LOAD DATA
-# ============================================================
+
+# LOAD DATA
+
 
 df = pd.read_csv(DATA_FILE)
 
@@ -108,9 +95,8 @@ print(
 )
 
 
-# ============================================================
-# 6. REQUIRED COLUMNS
-# ============================================================
+
+#  REQUIRED COLUMNS
 
 required_columns = [
 
@@ -161,9 +147,8 @@ if missing_columns:
     )
 
 
-# ============================================================
-# 7. DATA PREPARATION
-# ============================================================
+
+# DATA PREPARATION
 
 df["Arrival_Timestamp"] = pd.to_datetime(
     df["Arrival_Timestamp"],
@@ -189,16 +174,16 @@ if invalid_dates > 0:
     )
 
 
-# Sort by arrival
+# Sort
 
 df = df.sort_values(
     "Arrival_Timestamp"
 ).reset_index(drop=True)
 
 
-# ============================================================
-# 8. INTER-ARRIVAL TIME
-# ============================================================
+
+#  INTER-ARRIVAL TIME
+
 
 df["Inter_Arrival_Min"] = (
 
@@ -217,9 +202,9 @@ df["Inter_Arrival_Min"] = (
 )
 
 
-# ============================================================
-# 9. BASIC DATA QUALITY ANALYSIS
-# ============================================================
+
+# BASIC DATA QUALITY ANALYSIS
+
 
 print("\n" + "=" * 75)
 print("DATA QUALITY ANALYSIS")
@@ -249,7 +234,7 @@ print(
 )
 
 
-# Save missing-value analysis
+# Save missing value analysis
 
 missing_summary.to_csv(
 
